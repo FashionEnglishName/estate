@@ -141,3 +141,8 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+try:
+    from .local_setting import *
+except ImportError:
+    pass
